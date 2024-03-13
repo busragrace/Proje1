@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define KEY 10 //Sifremede kullanýlacak kaydýrma miktarý sabit bir deger olarak KEY=10 olarak belirlenmis oldu
+#define KEY 10 //Sifremede kullanilacak kaydirma miktari sabit bir deger olarak KEY=10 olarak belirlenmis oldu
 
 void encryptFile(FILE *inputFile, FILE *outputFile) { //sifreleme fonksiyonu
     char ch;
     while ((ch = fgetc(inputFile)) != EOF) {
-        ch = ch + KEY; //her karakter 10 artýrýldý
+        ch = ch + KEY; //her karakter 10 artï¿½rï¿½ldï¿½
         fputc(ch, outputFile); 
     }
 }
@@ -22,7 +22,7 @@ void decryptFile(FILE *inputFile, FILE *outputFile) { //sifre cozme fonksiyonu
 int main() {
     FILE *inputFile, *outputFile;
     char inputFileName[100], outputFileName[100];
-    int secim; //kullanýcýnýn yaomak istedigi islem icin
+    int secim; //kullanï¿½cï¿½nï¿½n yaomak istedigi islem icin
 
     printf("Dosya adini girin: ");
     scanf("%s", inputFileName);
@@ -46,7 +46,7 @@ int main() {
     printf("1- Sifrele \n2- Sifreyi Coz \n Seciminizi yapin: ");
     scanf("%d", &secim);
 
-    switch (secim) { //secime göre yapýlacak islemler tanýmlandý
+    switch (secim) { //secime gï¿½re yapï¿½lacak islemler tanï¿½mlandï¿½
         case 1:
             encryptFile(inputFile, outputFile);
             printf("Dosya sifrelendi.\n");
